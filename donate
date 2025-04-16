@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BotevLand - Донаторски Рангове</title>
+  <style>
+    :root {
+      --bg-color: #1a1a1a;
+      --text-color: #f0f0f0;
+      --highlight: #FFD700;
+      --card-bg: #000;
+    }
+
+    body.light {
+      --bg-color: #ffffff;
+      --text-color: #000000;
+      --card-bg: #f0f0f0;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      transition: all 0.3s ease;
+    }
+    header {
+      background-color: #000;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    header img {
+      height: 100px;
+      margin-right: 20px;
+    }
+    header h1 {
+      font-size: 3em;
+      color: var(--highlight);
+    }
+    nav {
+      position: fixed;
+      top: 0;
+      right: 0;
+      padding: 10px;
+    }
+    nav button {
+      background-color: var(--highlight);
+      color: #000;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .rank {
+      background: var(--card-bg);
+      border: 3px solid var(--highlight);
+      border-radius: 15px;
+      margin: 20px;
+      padding: 20px;
+      box-shadow: 0 0 10px var(--highlight);
+    }
+    .rank h2 {
+      color: var(--highlight);
+    }
+    .rank ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    .rank li {
+      background: #FFD70022;
+      margin: 5px 0;
+      padding: 10px;
+      border-radius: 8px;
+    }
+    .buy-button {
+      background-color: var(--highlight);
+      color: #000;
+      font-weight: bold;
+      padding: 10px 20px;
+      margin-top: 10px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      display: inline-block;
+    }
+    .promo {
+      margin-top: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+    .promo input {
+      padding: 8px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+    .footer {
+      background-color: #111;
+      color: var(--text-color);
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+      font-size: 0.9em;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <button onclick="toggleTheme()">Смени тема</button>
+  </nav>
+  <header>
+    <img src="/mnt/data/viber_изображение_2025-04-13_20-45-37-339.jpg" alt="BotevLand Logo">
+    <h1>BotevLand</h1>
+  </header>
+
+  <section class="rank">
+    <h2>HERO</h2>
+    <ul>
+      <li>Уникален кит - /kit hero</li>
+      <li>Виртуален верстак - /craft</li>
+      <li>Научи рецепта - /recipe</li>
+      <li>Локация на координати - /getpos</li>
+      <li>5 слота на аукциона</li>
+      <li>2 региона за защита</li>
+      <li>Префикс [HERO] в чата и TAB-а</li>
+    </ul>
+    <div class="promo">
+      <input type="text" placeholder="Промо код">
+      <button class="buy-button" onclick="window.open('https://www.paypal.com/pay?hero')">Купи HERO</button>
+    </div>
+  </section>
+
+  <section class="rank">
+    <h2>TITAN</h2>
+    <ul>
+      <li>Уникален кит - /kit titan</li>
+      <li>Надяване на блок - /hat</li>
+      <li>Възстанови глад - /feed</li>
+      <li>РТП на дълго разстояние - /rtpfar</li>
+      <li>Виж ID на предмет - /itemdb</li>
+      <li>7 слота на аукциона</li>
+      <li>4 региона за защита</li>
+      <li>Префикс [TITAN] в чата и TAB-а</li>
+    </ul>
+    <div class="promo">
+      <input type="text" placeholder="Промо код">
+      <button class="buy-button" onclick="window.open('https://www.paypal.com/pay?titan')">Купи TITAN</button>
+    </div>
+  </section>
+
+  <section class="rank">
+    <h2>AVENGER</h2>
+    <ul>
+      <li>Уникален кит - /kit avenger</li>
+      <li>Отвори ендер-сандък - /enderchest</li>
+      <li>Изгаси себе си - /ext</li>
+      <li>Игнорирай играч - /ignore</li>
+      <li>Изчисти инвентар - /clear</li>
+      <li>9 слота на аукциона</li>
+      <li>8 региона за защита</li>
+      <li>6 дома чрез /sethome</li>
+      <li>Префикс [AVENGER] в чата и TAB-а</li>
+    </ul>
+    <div class="promo">
+      <input type="text" placeholder="Промо код">
+      <button class="buy-button" onclick="window.open('https://www.paypal.com/pay?avenger')">Купи AVENGER</button>
+    </div>
+  </section>
+
+  <footer class="footer">
+    &copy; 2025 BotevLand. Всички права запазени.
+  </footer>
+
+  <script>
+    function toggleTheme() {
+      document.body.classList.toggle('light');
+    }
+  </script>
+</body>
+</html>
